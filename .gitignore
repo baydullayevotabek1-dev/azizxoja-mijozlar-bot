@@ -1,0 +1,9 @@
+.env
+*.db
+*.session
+*.session-journal
+*.migrated
+sessions/
+bot.log
+__pycache__/
+PLAN.md

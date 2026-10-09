@@ -1,0 +1,28 @@
+# Render Blueprint: Render -> New -> Blueprint -> shu repozitoriyni tanlang.
+# "sync: false" qiymatlarini Render o'zi so'raydi (maxfiy — GitHub'ga yozilmaydi).
+services:
+  - type: web
+    name: azizxoja-mijozlar-bot
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.2
+      - key: STARTUP_DELAY
+        value: "45"
+      - key: ALLOWED_OWNERS
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false

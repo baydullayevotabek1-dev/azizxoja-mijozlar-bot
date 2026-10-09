@@ -1,0 +1,6 @@
+aiogram>=3.20
+telethon>=1.40
+google-genai>=1.30
+segno>=1.5
+psycopg[binary]>=3.2
+python-dotenv>=1.0

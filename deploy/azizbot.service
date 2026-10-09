@@ -1,0 +1,14 @@
+[Unit]
+Description=Azizxoja mijozlar boti
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/azizbot
+ExecStart=/opt/azizbot/venv/bin/python main.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
